@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easyway.website.cshx.mapper.CoachInfoMapper">
+
+	<resultMap type="coachinfo" id="coachinforesult">
+		<result property="traveldate" column="TRAVEL_DATE" />
+		<result property="schedulecode" column="SCHEDULE_CODE" />
+		<result property="stopstationname" column="STOP_STATION_NAME" />
+		<result property="arrstationname" column="ARR_STATION_NAME" />
+		<result property="deptime" column="DEP_TIME" />
+		<result property="vehiclelevel" column="VEHICLE_LEVEL" />
+		<result property="peoplenum" column="PEOPLE_NUM" />
+		<result property="kil" column="KIL" />
+		<result property="duration" column="DURATION" />
+		<result property="remainseatnum" column="REMAIN_SEAT_NUM" />
+		<result property="remainchildnum" column="REMAIN_CHILD_NUM" />
+		<result property="exeprice" column="EXE_PRICE" />
+		<result property="halfprice" column="HALF_PRICE" />
+		<result property="boardlocation" column="BOARD_LOCATION" />
+		<result property="checkinno" column="CHECK_IN_NO" />
+		<result property="gettime" column="GET_TIME" />
+	</resultMap>
+	
+	<select id="query" resultMap="coachinforesult">
+		select * from HC_C_DYNAMIC
+		<if test="conditions != null">
+			<where>
+				<if
+					test="conditions.boardlocation != null and conditions.boardlocation !=''">
+					BOARD_LOCATION = #{conditions.boardlocation}
+				</if>
+				<if
+					test="conditions.arrstationname != null and conditions.arrstationname !=''">
+					and ARR_STATION_NAME = #{conditions.arrstationname}
+				</if>
+				<if
+					test="conditions.traveldate != null">
+					and TRAVEL_DATE = #{conditions.traveldate}
+				</if>
+			</where>
+		</if>
+	</select>
+</mapper>

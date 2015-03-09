@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>无标题</title>
+<script src="thirdparty/jq-easyui/jquery.min.js" type="text/javascript"></script>
+<script src="thirdparty/jq-easyui/jquery.easyui.min.js"
+	type="text/javascript"></script>
+<script src="thirdparty/jq-easyui/jquery.easing.1.3.js"
+	type="text/javascript"></script>
+<link href="thirdparty/jq-easyui/themes/default/easyui.css"
+	rel="stylesheet" type="text/css" />
+<link href="thirdparty/jq-easyui/themes/icon.css" rel="stylesheet"
+	type="text/css" />
+<script src="thirdparty/jq-easyui/locale/easyui-lang-zh_CN.js"
+	type="text/javascript"></script>
+<script src="thirdparty/slideViewer/slideViewer.js"
+	type="text/javascript"></script>
+<link href="thirdparty/slideViewer/style/slideViewer.css"
+	rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="syd">
+		<div class="divk">
+			<table width="100%" height="72" border="0" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td width="517" rowspan="2" class="logo">&nbsp;</td>
+					<td height="30">
+						<div id="weather" class="font13-l"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank"
+								href="http://www.w3school.com.cn">设施介绍</a></li>
+							<li class="header-function-image"></li>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank"
+								href="http://www.w3school.com.cn">新闻公告</a></li>
+							<li class="header-function-image"></li>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank"
+								href="/CSHXSite/coachquery">班次查询</a></li>
+							<li class="header-function-image"></li>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank" href="main.html">首页</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="divk">
+		<div class="tu1">
+			<table>
+				<tr>
+					<td>
+						<div class="sychaxun">
+							<table width="392" height="254" border="0" align="center"
+								cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="45"><div class="fontcx-1">班次查询</div></td>
+								</tr>
+								<tr>
+									<td height="38">
+										<div class="sychaxun1">
+											<div class="fontcx-2">长途</div>
+										</div>
+									</td>
+								</tr>
+								<tr>								
+									<td valign="top" class="sychaxun4">
+										<table width="99%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="30%" height="30" class="fontcx-4">出发城市：</td>
+												<td width="70%"><select id="city1"
+													class="easyui-combobox" name="city1" style="width: 150px;">
+														<option value="北京">北京</option>
+														<option value="长沙">长沙</option>
+												</select></td>
+											</tr>
+											<tr>
+												<td height="30" class="fontcx-4">到达城市：</td>
+												<td><select id="city2" class="easyui-combobox"
+													name="city2" style="width: 150px;">
+														<option value="北京">北京</option>
+														<option value="长沙">长沙</option>
+												</select></td>
+											</tr>
+											<tr>
+												<td height="30" class="fontcx-4">日期：</td>
+												<td><input id="date" class="easyui-datebox" name="date" /></td>
+											</tr>
+																			<tr>
+									<td colspan="2" align="center"><a
+										href="javascript:void(0);"><img
+											src="/CSHXSite/image/15.png" onclick="queryCoachInfo()" /></a></td>
+								</tr>
+										</table>
+									</td>
+								</tr>
+
+							</table>
+						</div>
+					</td>
+					<td>
+						<div id="imagedomain" class="svw">
+							<ul>
+								<li><img src="image/34.png" alt="my description for this image" /></li>
+								<li><img src="image/34.png" alt="this is my dog..." /></li>
+								<li><img src="image/34.png" alt="my dog eating the cat" /></li>
+								<li><img src="image/34.png" alt="my r/c helicopter crashing..." /></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="divk">
+		<div class="syrk">
+			<div class="syr-1">
+				<div class="fontsy-1">设施介绍</div>
+			</div>
+			<div class="syr-2">
+				<a href="http://www.w3school.com.cn"><img src="image/04.png"
+					alt="" /></a>
+			</div>
+			<div class="syr-3">
+				<a href="http://www.w3school.com.cn"><img src="image/05.png"
+					alt="" /></a>
+			</div>
+			<div class="syr-4">
+				<a href="http://www.w3school.com.cn"><img src="image/06.png"
+					alt="" /></a>
+			</div>
+			<div class="syr-5">
+				<a href="http://www.w3school.com.cn"><img src="image/07.png"
+					alt="" /></a>
+			</div>
+			<div class="syr-6">
+				<a href="http://www.w3school.com.cn"><img src="image/08.png"
+					alt="" /></a>
+			</div>
+		</div>
+		<div id="text-news" class="sylk">
+			<div id="new-column-div" class="syl-2">
+				<div class="fontsyl-2">
+					<a class="more-link" target="_blank" href="html/news/morenews.html">更多</a>
+				</div>
+				<div>
+					<a id="news-column1" class="column-selected"
+						onmouseover="tabController('news-column1','div-xw-1')"
+						href="javascript:void(0);">今日</a>
+				</div>
+				<div>
+					<a id="news-column2" class="column-unselected"
+						onmouseover="tabController('news-column2','div-xw-2')"
+						href="javascript:void(0);">时事</a>
+				</div>
+				<div>
+					<a id="news-column3" class="column-unselected"
+						onmouseover="tabController('news-column3','div-xw-2')"
+						href="javascript:void(0);">体育</a>
+				</div>
+				<div>
+					<a id="news-column4" class="column-unselected"
+						onmouseover="tabController('news-column4','div-xw-2')"
+						href="javascript:void(0);">财经</a>
+				</div>
+				<div>
+					<a id="news-column5" class="column-unselected"
+						onmouseover="tabController('news-column5','div-xw-2')"
+						href="javascript:void(0);">铁路</a>
+				</div>
+			</div>
+
+			<div class="sylk-display" id="div-xw-1">
+				<div class="xwtu"></div>
+				<table width="71%" height="144" border="0" align="right"
+					cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="7%" height="0" align="center" valign="middle"></td>
+						<td width="73%" align="left" class="font13-r"></td>
+						<td width="20%" class="font13-l"></td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+				</table>
+			</div>
+			<div class="sylk-undisplay" id="div-xw-2">
+				<div class="xwtu"></div>
+				<table width="71%" height="144" border="0" align="right"
+					cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="7%" height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td width="73%" align="left" class="font13-r"><a
+							class="news-link" target="_blank"
+							href="http://www.w3school.com.cn">1111111</a></td>
+						<td width="20%" class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r"><a class="news-link"
+							target="_blank" href="http://www.w3school.com.cn">22222</a></td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r"><a class="news-link"
+							target="_blank" href="http://www.w3school.com.cn">333</a></td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r"><a class="news-link"
+							target="_blank" href="http://www.w3school.com.cn">55555</a></td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r"><a class="news-link"
+							target="_blank" href="http://www.w3school.com.cn">77777</a></td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r"><a class="news-link"
+							target="_blank" href="http://www.w3school.com.cn">888888</a></td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="advice" class="sylk">
+			<div class="syl-2">
+				<div class="fontsyl-2">
+					<a class="more-link" target="_blank"
+						href="http://www.w3school.com.cn">更多</a>
+				</div>
+				<div>
+					<a id="news-column1" class="column-selected"
+						onmouseover="tabController('news-column1','div-xw-1')"
+						href="javascript:void(0);">投诉建议</a>
+				</div>
+			</div>
+			<div class="sylk-display" id="div-advice-1">
+				<div class="advice-image-domain">
+					<table>
+						<tr>
+							<td><img src="image/09.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:void(0);"><img
+									src="image/10.png" onclick="guest()" /></a></td>
+						</tr>
+					</table>
+				</div>
+				<table width="71%" height="144" border="0" align="right"
+					cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="7%" height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td width="73%" align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td width="20%" class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r">新闻信息闻信息闻信息闻信息闻信息</td>
+						<td class="font13-l">2014.11.12</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id=guestmsg></div>
+	<div class="divk">
+		<div id="exhibition" class="sylk-exhibition">
+			<div class="syl-2">
+				<div class="fontsyl-2">
+					<a class="more-link" target="_blank"
+						href="http://www.w3school.com.cn">更多</a>
+				</div>
+				<div>
+					<a id="exhibition-column1" class="news-column-selected"
+						onmouseover="tabController('exhibition-column1','div-xw-1')"
+						href="javascript:void(0);">员工风采</a>
+				</div>
+			</div>
+			<div>
+				<img class="exhibition-image" src="image/29.png" alt="" /> <img
+					class="exhibition-image" src="image/29.png" alt="" /> <img
+					class="exhibition-image" src="image/29.png" alt="" /> <img
+					class="exhibition-image" src="image/29.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<div class="divk">
+		<div class="yqxx">
+			友情链接: <a class="yqlink" href="http://www.jd.com">京东商城</a> | <a
+				class="yqlink" href="http://www.taobao.com">淘宝</a> |
+		</div>
+	</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><div class="font13">版权信息</div></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var webroot = "/CSHXSite"
+		$(document)
+				.ready(
+						function() {
+							$("div#imagedomain").slideView();
+
+							$
+									.ajax({
+										type : "post",
+										url : webroot + "/weatherinfo",
+										dataType : "json",
+										success : function(data) {
+											$("div#weather")
+													.html(
+															data.results[0].currentCity
+																	+ ":"
+																	+ " "
+																	+ data.results[0].weather_data[0].weather
+																	+ " "
+																	+ data.results[0].weather_data[0].wind
+																	+ " "
+																	+ data.results[0].weather_data[0].temperature);
+										},
+										error : function(XMLHttpRequest,
+												textStatus, errorThrown) {
+											alert(errorThrown);
+										}
+									});
+						});
+
+		function tabController(column, news) {
+			var displayNewsDiv = $("#text-news").find(".sylk-display");
+			var selectedColumn = $("#text-news").find(".news-column-selected");
+
+			displayNewsDiv.removeClass("sylk-display");
+			displayNewsDiv.addClass("sylk-undisplay");
+			$("#" + news).removeClass("sylk-undisplay");
+			$("#" + news).addClass("sylk-display");
+
+			selectedColumn.removeClass("news-column-selected");
+			selectedColumn.addClass("news-column-unselected");
+			$("#" + column).removeClass("news-column-unselected");
+			$("#" + column).addClass("news-column-selected");
+		}
+
+		function guest() {
+			$("div#guestmsg").dialog({
+				title : '旅客留言',
+				href : 'html/guestmsg.html',
+				height : 280,
+				width : 400,
+				iconCls : 'icon-edit',
+				modal : true,
+				closed : false
+			});
+		}
+
+		function queryCoachInfo() {
+			window.location.href='/CSHXSite/coachquery/coachquery.html?city1='+$("#city1").combobox('getValue')+'&city2='+$("#city2").combobox('getValue')
+					+'&date='+$("#date").datebox('getValue');
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>班次查询</title>
+<script src="../thirdparty/jq-easyui/jquery.min.js" type="text/javascript"></script>
+<script src="../thirdparty/jq-easyui/jquery.easyui.min.js" type="text/javascript"></script>
+<script src="../thirdparty/jq-easyui/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="../thirdparty/jq-easyui/plugins/jquery.query.js" type="text/javascript"></script>
+<link href="../thirdparty/jq-easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />
+<link href=".../thirdparty/jq-easyui/themes/icon.css" rel="stylesheet" type="text/css" />
+<script src="../thirdparty/jq-easyui/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
+<script src="../thirdparty/slideViewer/slideViewer.js" type="text/javascript"></script>
+<link href="../thirdparty/slideViewer/style/slideViewer.css" rel="stylesheet" type="text/css" />
+<link href="../css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="syd">
+  <div class="divk">
+    <table width="100%" height="72" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="517" rowspan="2" class="logo">&nbsp;</td>
+        <td height="30">     
+            <div id="weather" class="font13-l"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <ul>
+        <li class="header-function-text"><a class="header-function-link"  href="http://www.w3school.com.cn">设施介绍</a></li>
+        <li class="header-function-image"></li>
+        <li class="header-function-text"><a class="header-function-link"  href="/CSHXSite/more/morenews.html">新闻公告</a></li>
+        <li class="header-function-image"></li>
+        <li class="header-function-text"><a class="header-function-link"  href="/CSHXSite/coachquery/coachquery.html">班次查询</a></li>
+        <li class="header-function-image"></li>
+        <li class="header-function-text"><a class="header-function-link"  href="main.html">首页</a></li>
+        </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="divk">
+  <div class="tu2"></div>
+</div>
+<div class="divk">
+  <div class="xwgg-kr">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="xwgg-5"><div class="font13-r">首页&gt;班次查询</div></td>
+      </tr>
+      <tr>
+        <td><div class="fontsyl-1">班次查询</div></td>
+      </tr>
+    </table>
+    <table width="392" height="254" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="38"><div class="sychaxun6">
+          <div class="sychaxun3">
+              <div class="fontcx-3">长途</div>
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+      <td valign="top" class="sychaxun7">
+      <form id="form1" name="form1" method="post" action="/CSHXSite/coachinfo">
+      <table width="99%" height="50" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+              <td height="30" class="fontcx-4">出发城市：</td>
+             
+              <td>
+              <select id="city1" class="easyui-combobox" name="city1" style="width:100px;">
+              <option value="北京">北京</option>
+              <option value="长沙">长沙</option>
+              </select>
+              </td>
+              
+              <td height="30" class="fontcx-4">到达城市：</td>
+              <td>              
+              <select id="city2" class="easyui-combobox" name="city2" style="width:100px;">
+              <option value="北京">北京</option>
+              <option value="长沙">长沙</option>
+              </select>
+              </td>
+              
+              <td height="30" class="fontcx-4">日期：</td>
+              <td><input id="date" class="easyui-datebox" name="date"/></td>
+            </tr>
+       <tr>
+        <td colspan="6" align="center"><a href="javascript:void(0);"><img src="/CSHXSite/image/15.png" onclick="queryCoachInfo()"/></a></td>
+      </tr>
+      <tr>
+      <div>
+            <table id="dataList" name="dataList" class="easyui-datagrid" title="" style="width:797px;height:250px;border:0;"
+			data-options="singleSelect:true">
+		<thead>
+			<tr>
+				<th data-options="field:'boardlocation',width:180">出发站</th>
+				<th data-options="field:'arrstationname',width:180">到达站</th>
+				<th data-options="field:'deptime',width:180">出发时间</th>
+				<th data-options="field:'exeprice',width:254">票价</th>
+			</tr>
+		</thead>
+	</table>
+      </div>
+      </tr>
+       </table>
+       </form>
+       </td>  
+      </tr>
+    </table>
+  </div>
+  <div class="xwgg-kl">
+    <div class="xwgg-3">
+      <div class="fontxwgg-1">班次查询</div>
+    </div>
+  </div>
+</div>
+<div class="divk">
+  <div class="yqxx">友情链接</div>
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><div class="font13">版权信息</div></td>
+  </tr>
+</table>
+<script>
+    var webroot = '/CSHXSite';
+	var city1 = $.query.get("city1");
+	var city2 = $.query.get("city2");
+	var date = $.query.get("date");
+	$(document).ready(function() {
+		$.ajax({
+					type : "post",
+					url : webroot + "/weatherinfo",
+					dataType : "json",
+					success : function(data) {
+						$("div#weather")
+								.html(
+										data.results[0].currentCity
+												+ ":"
+												+ " "
+												+ data.results[0].weather_data[0].weather
+												+ " "
+												+ data.results[0].weather_data[0].wind
+												+ " "
+												+ data.results[0].weather_data[0].temperature);
+					},
+					error : function(XMLHttpRequest,
+							textStatus, errorThrown) {
+						alert(errorThrown);
+					}
+				});
+		
+		if (city1 != null && city1 != "") {
+			$('select#city1').combobox("setValue",city1);
+			$('select#city2').combobox("setValue",city2);
+			$('#date').datebox("setValue",date);
+			
+			$('#form1').form('submit', {
+				success : function(data) {
+					var obj = $.parseJSON(data);
+					if (obj.rows.length == 0) {
+						alert("无符合查询条件的数据");
+					}
+					$('#dataList').datagrid('loadData', obj);
+				}
+			});
+		}
+	});
+
+	function queryCoachInfo() {
+		$('#form1').form('submit', {
+			success : function(data) {
+				var obj = $.parseJSON(data);
+				if (obj.rows.length == 0) {
+					alert("无符合查询条件的数据");
+				}
+				$('#dataList').datagrid('loadData', obj);
+			}
+		});
+	}
+</script>
+</body>
+</html>

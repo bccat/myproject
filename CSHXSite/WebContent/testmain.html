@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>无标题</title>
+<script src="thirdparty/jq-easyui/jquery.min.js" type="text/javascript"></script>
+<script src="thirdparty/jq-easyui/jquery.easyui.min.js" type="text/javascript"></script>
+<script src="thirdparty/jq-easyui/jquery.easing.1.3.js" type="text/javascript"></script>
+<link href="thirdparty/jq-easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />
+<link href="thirdparty/jq-easyui/themes/icon.css" rel="stylesheet" type="text/css" />
+<script src="thirdparty/jq-easyui/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
+<script src="thirdparty/slideViewer/slideViewer.js" type="text/javascript"></script>
+<link href="thirdparty/slideViewer/style/slideViewer.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="syd">
+		<div class="divk">
+			<table width="100%" height="72" border="0" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td width="517" rowspan="2"><img src="${logo}"></td>
+					<td height="30">
+						<div id="weather" class="font13-l">长沙：晴 20℃</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank"
+								href="http://www.w3school.com.cn">设施介绍</a></li>
+							<li class="header-function-image"></li>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank"
+								href="http://www.w3school.com.cn">新闻公告</a></li>
+							<li class="header-function-image"></li>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank"
+								href="http://www.w3school.com.cn">班次查询</a></li>
+							<li class="header-function-image"></li>
+							<li class="header-function-text"><a
+								class="header-function-link" target="_blank" href="main.html">首页</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="divk">
+		<div class="tu1">
+			<table>
+				<tr>
+					<td>
+						<div class="sychaxun">
+							<table width="392" height="254" border="0" align="center"
+								cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="45"><div class="fontcx-1">班次查询</div></td>
+								</tr>
+								<tr>
+									<td height="38">
+										<div class="sychaxun1">
+											<div class="fontcx-2">长途</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" class="sychaxun4"><table width="99%"
+											border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="30%" height="30" class="fontcx-4">出发城市：</td>
+												<td width="70%"><form id="form1" name="form1"
+														method="post" action="">
+														<label> <input type="text" name="textfield" />
+														</label>
+													</form></td>
+											</tr>
+											<tr>
+												<td height="30" class="fontcx-4">到达城市：</td>
+												<td><form id="form1" name="form1" method="post"
+														action="">
+														<label> <input type="text" name="textfield2" />
+														</label>
+													</form></td>
+											</tr>
+											<tr>
+												<td height="30" class="fontcx-4">日期：</td>
+												<td><form id="form1" name="form1" method="post"
+														action="">
+														<label> <input type="text" name="textfield3" />
+														</label>
+													</form></td>
+											</tr>
+										</table></td>
+								</tr>
+								<tr>
+									<td><div class="fontcx-5"></div></td>
+								</tr>
+							</table>
+						</div>
+					</td>
+										<td>
+						<div id="imagedomain" class="svw">
+							<ul>
+							    							    							    <li><img src="/CSHXSite/image/35.png" /></li>
+							    							    <li><img src="/CSHXSite/image/35.png" /></li>
+							    							    <li><img src="/CSHXSite/image/35.png" /></li>
+							    							    <li><img src="/CSHXSite/image/35.png" /></li>
+							    							    							</ul>
+						</div>
+					</td>
+									</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="divk">
+		<div class="syrk">
+			<div class="syr-1">
+				<div class="fontsy-1">枢纽设施介绍</div>
+			</div>
+											</div>
+		
+		<div id="text-news" class="sylk">
+			<div id="new-column-div" class="syl-2">
+				<div class="fontsyl-2">
+					<a class="more-link" target="_blank" href="html/news/morenews.html">更多</a>
+				</div>
+												<div>
+					<a id="news-column2" class="column-selected"
+						onmouseover="tabController('news-column2','news-div2','text-news')"
+						href="javascript:void(0);">国内要闻</a>
+				</div>
+											</div>
+			
+									<div class="sylk-display" id="news-div2">
+				<div class="xwtu"></div>
+				<table width="71%" height="144" border="0" align="right"
+					cellpadding="0" cellspacing="0">
+										<tr>
+						<td height="25" align="center" valign="middle"><img
+							src="image/29.png" width="5" height="5" /></td>
+						<td align="left" class="font13-r"><a class="news-link" target="_blank" href="1423807575233.html">22</a></td>
+						<td class="font13-l">2015-02-01 16:53:29.0</td>
+					</tr>
+										<tr>
+						<td width="7%" height="0" align="center" valign="middle"></td>
+						<td width="73%" align="left" class="font13-r"></td>
+						<td width="20%" class="font13-l"></td>
+					</tr>
+				</table>
+			</div>
+								</div>
+
+        
+		<div id="advice" class="sylk">
+			<div class="syl-2">
+				<div class="fontsyl-2">
+					<a class="more-link" target="_blank"
+						href="http://www.w3school.com.cn">更多</a>
+				</div>
+															</div>
+			
+		    		    		    		</div>
+	</div>
+
+	<div class="divk">
+		<div id="exhibition" class="sylk-exhibition">
+			<div class="syl-2">
+				<div class="fontsyl-2">
+					<a class="more-link" target="_blank"
+						href="http://www.w3school.com.cn">更多</a>
+				</div>
+												<div>
+					<a id="exhibition-cloumn2" class="column-selected"
+						onmouseover="tabController('exhibition-cloumn2','exhibition-div2','exhibition')"
+						href="javascript:void(0);">员工风采</a>
+				</div>
+											</div>
+									<div class="sylk-display" id="exhibition-div2">
+			    				<img class="exhibition-image" src="/CSHXSite/image/33.png" alt="" /> 
+							</div>
+								</div>
+	</div>
+
+	<div class="divk">
+		<div class="yqxx">
+			友情链接: 
+					</div>
+	</div>
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><div class="font13">版权信息 dfgqregrqg</div></td>
+		</tr>
+	</table>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div#imagedomain").slideView();
+		});
+
+		function tabController(column, columndiv, functiondiv) {
+			var displayDiv = $("#"+functiondiv).find(".sylk-display");
+			var selectedColumn = $("#"+functiondiv).find(".column-selected");
+
+			displayDiv.removeClass("sylk-display");
+			displayDiv.addClass("sylk-undisplay");
+			$("#" + columndiv).removeClass("sylk-undisplay");
+			$("#" + columndiv).addClass("sylk-display");
+
+			selectedColumn.removeClass("column-selected");
+			selectedColumn.addClass("column-unselected");
+			$("#" + column).removeClass("column-unselected");
+			$("#" + column).addClass("column-selected");
+		}
+	</script>
+</body>
+</html>
